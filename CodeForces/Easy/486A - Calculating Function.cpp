@@ -1,22 +1,17 @@
 #include <iostream>
-#include <algorithm>
-#include <vector> 
-#include <cmath>
+
 using namespace std;
 
-
 int main() {
-    long long int sum,number;
+    
+    long long int number;
     cin>>number;
-     
-    sum = 0;
-    if(number%2==0){
-        sum = number/2;
+
+    if(number%2!=0){
+        cout<<-((number+1)/2)<<endl;
     }
     else {
-        sum = (number-1)/2-number;
+       cout<<(number+1)/2<<endl;
     }
-    cout<<sum<<endl;
-
     return 0;
 }

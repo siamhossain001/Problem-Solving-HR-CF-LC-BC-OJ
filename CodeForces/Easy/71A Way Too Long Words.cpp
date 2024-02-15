@@ -1,23 +1,20 @@
-#include<iostream>
-#include<string>
-
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
-   
-    string word;
-    int test;
+int main() {
+    int n;
+    cin >> n;
 
-    cin>>test;
-    while(test--){
-         cin>>word;
-         if(word.length()<10){
-            cout<<word<<endl;
-         }
-         else {
-            cout<<word[0]<<word.length()-2<<word[word.length()-1]<<endl;
-         }
+    while (n--) {
+        string word;
+        cin >> word;
 
+        if (word.size() > 10) {
+            cout << word[0] << word.size() - 2 << word.back() << endl;
+        } else {
+            cout << word << endl;
+        }
     }
 
     return 0;
