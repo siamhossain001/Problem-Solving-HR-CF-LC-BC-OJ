@@ -1,30 +1,31 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <cmath>
 
 using namespace std;
-int main(){
-    int N,input,counter;
-    cin>>N;
+int main() {
+    int n;
+    cin>>n;
     
-    int hired = 0;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    int hire = 0;
     int crime = 0;
 
-    counter = 0;
-    while(N--){
-        cin>>input;
-        if(input>=1){
-            hired=input;
+    for(int i=0;i<n;i++){
+        if(hire==0 && arr[i]==-1){
+            crime++;
         }
-        else{
-            if(hired>0 && input==-1){
-               hired += input;
-               
-            }
-            else{
-                counter++;
-            }
+        else if(hire>0 && arr[i]==-1){
+            hire+=arr[i];
+        }
+        else {
+            hire+=arr[i];
         }
     }
-    cout<<counter<<endl;
-
+    cout<<crime<<endl;
+    return 0;
 }
